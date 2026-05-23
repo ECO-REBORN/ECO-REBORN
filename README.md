@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoMochilas - Estilo Sostenible</title>
+    <title>ECO-REBORN | Mochilas de PVC Reciclado</title>
     <style>
         /* --- ESTILOS GENERALES --- */
+        :root {
+            --primary-color: #2e7d32;
+            --primary-light: #a5d6a7;
+            --dark-color: #212121;
+            --light-bg: #f5f5f5;
+            --white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,108 +22,148 @@
         }
 
         body {
-            color: #333;
-            background-color: #f9f9f6;
+            background-color: var(--light-bg);
+            color: var(--dark-color);
             line-height: 1.6;
         }
 
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- HEADER Y NAVEGACIÓN --- */
         header {
-            background-color: #2e4a3f; /* Verde ecológico oscuro */
-            color: white;
-            padding: 1rem 2rem;
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
+        }
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 0;
         }
 
-        header h1 {
-            font-size: 1.5rem;
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        nav a {
-            color: white;
+        .logo span {
+            color: var(--dark-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
             text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
+            color: var(--dark-color);
+            font-weight: 500;
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #a3c9a8; /* Verde claro al pasar el mouse */
+        .nav-links a:hover {
+            color: var(--primary-color);
         }
 
         /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(rgba(46, 74, 63, 0.7), rgba(46, 74, 63, 0.7)), url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            height: 60vh;
-            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+            height: 70vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
+            color: var(--white);
         }
 
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
         }
 
-        .hero p {
+        .hero-content p {
             font-size: 1.2rem;
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
             max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .btn-main {
-            background-color: #84a98c;
-            color: white;
-            padding: 12px 30px;
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 2rem;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
-            border-radius: 25px;
             transition: background 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        .btn-main:hover {
-            background-color: #52796f;
+        .btn:hover {
+            background-color: #1b5e20;
         }
 
-        /* --- SECCIONES CONTENEDORAS --- */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        h3 {
+        /* --- CONCEPTO / INFO --- */
+        .concept {
+            padding: 5rem 0;
             text-align: center;
-            font-size: 2rem;
-            color: #2e4a3f;
-            margin-bottom: 30px;
+            background-color: var(--white);
+        }
+
+        .concept h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .concept p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #555;
         }
 
         /* --- PRODUCTOS --- */
-        .products-grid {
+        .products {
+            padding: 5rem 0;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+        }
+
+        .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .product-card {
-            background: white;
+            background-color: var(--white);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
         .product-card:hover {
@@ -124,223 +172,152 @@
 
         .product-img {
             width: 100%;
-            height: 250px;
+            height: 300px;
             background-color: #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #666;
             font-weight: bold;
-            /* Simulación de imágenes reales con Unsplash */
-            background-size: cover;
-            background-position: center;
+            color: #666;
+            /* Simulación de imágenes con colores placeholder */
+            background: linear-gradient(45deg, var(--primary-light), #b0bec5);
         }
 
         .product-info {
-            padding: 20px;
-            text-align: center;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .product-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #2e4a3f;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
         }
 
         .product-desc {
             font-size: 0.9rem;
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
+            flex-grow: 1;
         }
 
         .product-price {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             font-weight: bold;
-            color: #354f52;
-            margin-bottom: 15px;
-        }
-
-        .btn-buy {
-            display: block;
-            background-color: #2e4a3f;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn-buy:hover {
-            background-color: #84a98c;
-        }
-
-        /* --- SOBRE NOSOTROS --- */
-        .about-section {
-            background-color: #ecefe6;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 10px;
-            margin-top: 50px;
-        }
-
-        .about-section p {
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-            font-size: 1.1rem;
-        }
-
-        /* --- CONTACTO --- */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #2e4a3f;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .btn-submit {
-            background-color: #2e4a3f;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn-submit:hover {
-            background-color: #52796f;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
         /* --- FOOTER --- */
         footer {
-            background-color: #2e4a3f;
-            color: white;
+            background-color: var(--dark-color);
+            color: var(--white);
             text-align: center;
-            padding: 20px;
-            margin-top: 60px;
+            padding: 2rem 0;
+            margin-top: 5rem;
+        }
+
+        footer p {
             font-size: 0.9rem;
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado / Navegación -->
+    <!-- NAVEGACIÓN -->
     <header>
-        <h1>🌱 EcoMochilas</h1>
-        <nav>
-            <a href="#productos">Productos</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <div class="container navbar">
+            <div class="logo">ECO-<span>REBORN</span></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#concepto">Concepto</a></li>
+                <li><a href="#productos">Mochilas</a></li>
+            </ul>
+        </div>
     </header>
 
-    <!-- Sección Principal (Hero) -->
-    <section class="hero">
-        <h2>Lleva el futuro en tu espalda</h2>
-        <p>Mochilas premium hechas al 100% con botellas plásticas recuperadas del océano y textiles reciclados.</p>
-        <a href="#productos" class="btn-main">Ver Colección</a>
-    </section>
-
-    <!-- Sección de Productos -->
-    <section id="productos" class="container">
-        <h3>Nuestros Modelos Sostenibles</h3>
-        <div class="products-grid">
-            
-            <!-- Producto 1 -->
-            <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80');"></div>
-                <div class="product-info">
-                    <div class="product-title">Mochila Eco-Urbana</div>
-                    <div class="product-desc">Perfecta para el día a día o la universidad. Hecha con 25 botellas PET recicladas. Impermeable y con compartimento para laptop.</div>
-                    <div class="product-price">$45.00</div>
-                    <a href="#" class="btn-buy" onclick="alert('¡Gracias por tu interés! Aquí conectarías tu pasarela de pago (como PayPal, Stripe o WhatsApp).')">Comprar Ahora</a>
-                </div>
-            </div>
-
-            <!-- Producto 2 -->
-            <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=400&q=80');"></div>
-                <div class="product-info">
-                    <div class="product-title">Aventurera Pro (Cáñamo y PET)</div>
-                    <div class="product-desc">Diseñada para trekkings y viajes largos. Costuras reforzadas, ergonómica y con materiales 100% biodegradables y reciclados.</div>
-                    <div class="product-price">$65.00</div>
-                    <a href="#" class="btn-buy" onclick="alert('¡Gracias por tu interés!')">Comprar Ahora</a>
-                </div>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=400&q=80');"></div>
-                <div class="product-info">
-                    <div class="product-title">Maletín Ejecutivo Verde</div>
-                    <div class="product-desc">Estilo elegante y profesional sin remordimientos ambientales. Tela hecha de descarte textil de algodón orgánico.</div>
-                    <div class="product-price">$55.00</div>
-                    <a href="#" class="btn-buy" onclick="alert('¡Gracias por tu interés!')">Comprar Ahora</a>
-                </div>
-            </div>
-
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Segunda Vida al PVC</h1>
+            <p>Descubre nuestra colección de mochilas ultrarresistentes, impermeables y hechas 100% con banners y lonas de PVC recicladas en Perú.</p>
+            <a href="#productos" class="btn">Ver Catálogo</a>
         </div>
     </section>
 
-    <!-- Sección Sobre Nosotros -->
-    <section id="nosotros" class="container">
-        <div class="about-section">
-            <h3>Nuestra Misión Verde</h3>
-            <p>No somos solo una marca de mochilas; somos un movimiento para limpiar nuestro planeta. Cada año, millones de toneladas de plástico terminan en nuestros océanos. Nosotros las recolectamos, las procesamos y las transformamos en un accesorio duradero, útil y con un diseño increíble.</p>
-            <p><strong>Por cada mochila que compras, retiras 1 kg de basura del mar.</strong></p>
+    <!-- CONCEPTO -->
+    <section id="concepto" class="concept">
+        <div class="container">
+            <h2>El Concepto ECO-REBORN</h2>
+            <p>
+                Cada año, toneladas de lonas publicitarias de PVC terminan en los vertederos tardando cientos de años en degradarse. En <strong>ECO-REBORN</strong> transformamos estos materiales de alta resistencia en mochilas de diseño único y urbano. Al ser material reciclado, cada mochila tiene un patrón de diseño irrepetible, es completamente impermeable y está lista para resistir el ritmo de la ciudad.
+            </p>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="container">
-        <h3>¿Tienes dudas o quieres compras al por mayor?</h3>
-        <div class="contact-form">
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Mensaje enviado! Te contactaremos pronto.');">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" required placeholder="Tu nombre">
+    <!-- PRODUCTOS -->
+    <section id="productos" class="products">
+        <div class="container">
+            <h2>Nuestras Mochilas</h2>
+            <div class="product-grid">
+                
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-img" style="background: linear-gradient(135deg, #2e7d32, #1b5e20);">
+                        URBAN PACK PVC
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mochila Urban Pack</h3>
+                        <p class="product-desc">Perfecta para el día a día en la universidad o el trabajo. Compartimento para laptop de hasta 15" y 100% a prueba de lluvia limeña.</p>
+                        <div class="product-price">S/ 149.00</div>
+                        <button class="btn" onclick="agregarCarrito('Urban Pack')">Comprar</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" required placeholder="tu@correo.com">
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-img" style="background: linear-gradient(135deg, #0277bd, #001f3f);">
+                        ROLLTOP ADVENTURE
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Rolltop Adventure</h3>
+                        <p class="product-desc">Diseño expandible ideal para ciclistas y viajeros. Cierre hermético superior y espalda acolchada con material respirable.</p>
+                        <div class="product-price">S/ 189.00</div>
+                        <button class="btn" onclick="agregarCarrito('Rolltop Adventure')">Comprar</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <div class="product-img" style="background: linear-gradient(135deg, #f57c00, #e65100);">
+                        MINI ECO SLING
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mini Eco Sling</h3>
+                        <p class="product-desc">Mochila cruzada ligera para llevar lo esencial (celular, llaves, billetera). Estilo urbano, cómodo y sumamente resistente.</p>
+                        <div class="product-price">S/ 89.00</div>
+                        <button class="btn" onclick="agregarCarrito('Mini Eco Sling')">Comprar</button>
+                    </div>
                 </div>
-                <button type="submit" class="btn-submit">Enviar Mensaje</button>
-            </form>
+
+            </div>
         </div>
     </section>
 
-    <!-- Pie de página -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 EcoMochilas S.A. Todos los derechos reservados. Diseñado con ❤️ para el planeta.</p>
+        <div class="container">
+            <p>&copy; 2026 ECO-REBORN Perú - Moda Sostenible y Consciente. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
+    <!-- LÓGICA JAVASCRIPT -->
+    <script>
+        function agregarCarrito(nombreProducto) {
+            alert(`¡Genial! Has añadido la mochila "${nombreProducto}" a tu carrito de compras.`);
+        }
+    </script>
 </body>
 </html>
