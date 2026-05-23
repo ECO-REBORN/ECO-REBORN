@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Urbanis********t:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -502,7 +502,7 @@
                 <p>A través de un proceso artesanal de corte y confección local, las texturas gráficas aleatorias dan vida a accesorios de <span class="accent">resistencia industrial</span> listos para el ritmo urbano.</p>
             </div>
             <div class="image-collage">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/5530641747667678718" alt="Textura de PVC Upcycled Verde">
+                C:\Users\PC\Downloads\WhatsApp Image 2026-05-21 at 10.02.01 PM.jpeg
                 <img src="http://googleusercontent.com/image_collection/image_retrieval/18072100707645766408" alt="Detalle de parche ECO-REBORN">
             </div>
         </div>
