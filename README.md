@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECO-REBORN | Mochilas de PVC Reciclado</title>
+    <title>ECO-REBORN | Moda Circular & Upcycled Perú</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
-        /* --- ESTILOS GENERALES --- */
+        /* --- VARIABLES Y CONFIGURACIÓN PREMIUM (Inspirado en el Deck) --- */
         :root {
             --primary-color: #2e7d32;
-            --primary-light: #a5d6a7;
-            --dark-color: #212121;
-            --light-bg: #f5f5f5;
-            --white: #ffffff;
+            --primary-dark: #1b5e20;
+            --bg-dark: #0F0F0F;
+            --bg-card: #1A1A1A;
+            --text-light: #E8E5D8;
+            --text-muted: #A0A0A0;
+            --white: #FFFFFF;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Urbanist', sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--light-bg);
-            color: var(--dark-color);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
@@ -33,272 +45,514 @@
             margin: 0 auto;
         }
 
-        /* --- HEADER Y NAVEGACIÓN --- */
+        h1, h2, h3, .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- NAVBAR --- */
         header {
-            background-color: var(--white);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: rgba(15, 15, 15, 0.9);
+            border-bottom: 1px solid #222;
             position: sticky;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
         }
 
         .logo span {
-            color: var(--dark-color);
+            color: var(--primary-color);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 500;
-            transition: color 0.3s;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
         }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
+        .nav-links a:hover, .nav-links a.active {
             color: var(--white);
         }
 
+        .cart-icon-btn {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.3rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #cart-count {
+            position: absolute;
+            top: -10px;
+            right: -12px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            background: linear-gradient(rgba(15,15,15,0.7), rgba(15,15,15,0.95)), 
+                        url('https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(46, 125, 50, 0.15) 0%, transparent 70%);
+        }
+
         .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 5rem;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            color: var(--white);
         }
 
         .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 2.5rem;
         }
 
         .btn {
             display: inline-block;
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: var(--transition);
             border: none;
             cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .btn:hover {
-            background-color: #1b5e20;
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
         }
 
-        /* --- CONCEPTO / INFO --- */
-        .concept {
-            padding: 5rem 0;
-            text-align: center;
-            background-color: var(--white);
+        /* --- SECCIONES ESTRATÉGICAS --- */
+        .section-padding {
+            padding: 6rem 0;
         }
 
-        .concept h2 {
+        .section-title {
             font-size: 2.5rem;
-            color: var(--primary-color);
+            color: var(--white);
+            margin-bottom: 3rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 20px;
+        }
+
+        /* Concepto Split */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .concept-text p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
             margin-bottom: 1.5rem;
         }
 
-        .concept p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            color: #555;
+        .accent { color: var(--primary-color); font-weight: 600; }
+
+        .image-collage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
         }
 
-        /* --- PRODUCTOS --- */
-        .products {
-            padding: 5rem 0;
+        .image-collage img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #222;
         }
 
-        .products h2 {
+        /* --- STATS GRID (Del Deck) --- */
+        .stats-bg { background-color: #0A0A0A; border-y: 1px solid #222; }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--dark-color);
         }
 
+        .stat-item .number {
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        /* --- CATÁLOGO DE PRODUCTOS --- */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .product-card {
-            background-color: var(--white);
-            border-radius: 10px;
+            background-color: var(--bg-card);
+            border: 1px solid #222;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            transition: var(--transition);
             display: flex;
             flex-direction: column;
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
         }
 
-        .product-img {
+        .product-img-holder {
             width: 100%;
-            height: 300px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #666;
-            /* Simulación de imágenes con colores placeholder */
-            background: linear-gradient(45deg, var(--primary-light), #b0bec5);
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            background-color: #050505;
+        }
+
+        .product-img-holder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-img-holder img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4px 12px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 4px;
         }
 
         .product-info {
-            padding: 1.5rem;
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
-        .product-title {
-            font-size: 1.4rem;
+        .product-info h3 {
+            font-size: 1.5rem;
+            color: var(--white);
             margin-bottom: 0.5rem;
         }
 
         .product-desc {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
             flex-grow: 1;
         }
 
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid #222;
+        }
+
         .product-price {
-            font-size: 1.6rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .btn-sm {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* --- PANEL DE CARRITO LATERAL --- */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background-color: var(--bg-card);
+            border-left: 1px solid #222;
+            z-index: 2000;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+            transition: var(--transition);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #222;
+            padding-bottom: 1rem;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .cart-items-container {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            background: #111;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .cart-footer-panel {
+            border-top: 1px solid #222;
+            padding-top: 1.5rem;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.3rem;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 1.5rem;
         }
 
         /* --- FOOTER --- */
         footer {
-            background-color: var(--dark-color);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 5rem;
+            background-color: #0A0A0A;
+            border-top: 1px solid #222;
+            padding: 4rem 0 2rem 0;
         }
 
-        footer p {
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .footer-logo span { color: var(--primary-color); }
+
+        .footer-socials a {
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            margin-left: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .footer-socials a:hover { color: var(--primary-color); }
+
+        .footer-copy {
+            text-align: center;
+            color: #555;
             font-size: 0.9rem;
-            opacity: 0.8;
+            border-top: 1px solid #111;
+            padding-top: 2rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .concept-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .stats-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-content h1 { font-size: 3.2rem; }
+            .cart-sidebar { width: 100%; right: -100%; }
+            .footer-grid { flex-direction: column; gap: 2rem; text-align: center; }
+            .nav-links { display: none; } /* Simplificado para móviles */
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVEGACIÓN -->
     <header>
         <div class="container navbar">
-            <div class="logo">ECO-<span>REBORN</span></div>
+            <a href="#inicio" class="logo">ECO-<span>REBORN</span></a>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#inicio" class="active">Inicio</a></li>
                 <li><a href="#concepto">Concepto</a></li>
-                <li><a href="#productos">Mochilas</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li>
+                    <button class="cart-icon-btn" onclick="toggleCart()">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <h1>Segunda Vida al PVC</h1>
-            <p>Descubre nuestra colección de mochilas ultrarresistentes, impermeables y hechas 100% con banners y lonas de PVC recicladas en Perú.</p>
-            <a href="#productos" class="btn">Ver Catálogo</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>ECO-REBORN</h1>
+                <p>Moda Up-cycled con Impacto Circular. Transformamos residuos de lona publicitaria y PVC en el futuro del estilo urbano de Lima.</p>
+                <a href="#productos" class="btn">Explorar Catálogo</a>
+            </div>
         </div>
     </section>
 
-    <!-- CONCEPTO -->
-    <section id="concepto" class="concept">
-        <div class="container">
-            <h2>El Concepto ECO-REBORN</h2>
-            <p>
-                Cada año, toneladas de lonas publicitarias de PVC terminan en los vertederos tardando cientos de años en degradarse. En <strong>ECO-REBORN</strong> transformamos estos materiales de alta resistencia en mochilas de diseño único y urbano. Al ser material reciclado, cada mochila tiene un patrón de diseño irrepetible, es completamente impermeable y está lista para resistir el ritmo de la ciudad.
-            </p>
+    <section class="section-padding stats-bg">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <div class="number">500</div>
+                <p>Años tarda el PVC de un banner tradicional en degradarse.</p>
+            </div>
+            <div class="stat-item">
+                <div class="number">100%</div>
+                <p>Impermeable y de patrón gráfico único irrepetible.</p>
+            </div>
+            <div class="stat-item">
+                <div class="number">0%</div>
+                <p>Residuos plásticos añadidos. Economía circular pura.</p>
+            </div>
         </div>
     </section>
 
-    <!-- PRODUCTOS -->
-    <section id="productos" class="products">
+    <section id="concepto" class="section-padding">
+        <div class="container concept-grid">
+            <div class="concept-text">
+                <h2 class="section-title">Diseño con Conciencia</h2>
+                <p>Cada año, toneladas de gigantografías publicitarias terminan en vertederos peruanos. Interceptamos este material de alta ingeniería antes de que sea basura.</p>
+                <p>A través de un proceso artesanal de corte y confección local, las texturas gráficas aleatorias dan vida a accesorios de <span class="accent">resistencia industrial</span> listos para el ritmo urbano.</p>
+            </div>
+            <div class="image-collage">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/5530641747667678718" alt="Textura de PVC Upcycled Verde">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/18072100707645766408" alt="Detalle de parche ECO-REBORN">
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="section-padding" style="background-color: #0A0A0A;">
         <div class="container">
-            <h2>Nuestras Mochilas</h2>
+            <h2 class="section-title">Catálogo Oficial</h2>
             <div class="product-grid">
-                
-                <!-- Producto 1 -->
+
                 <div class="product-card">
-                    <div class="product-img" style="background: linear-gradient(135deg, #2e7d32, #1b5e20);">
-                        URBAN PACK PVC
+                    <div class="product-img-holder">
+                        <span class="product-badge">Edición Única</span>
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop" alt="Urban Backpack">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">Mochila Urban Pack</h3>
-                        <p class="product-desc">Perfecta para el día a día en la universidad o el trabajo. Compartimento para laptop de hasta 15" y 100% a prueba de lluvia limeña.</p>
-                        <div class="product-price">S/ 149.00</div>
-                        <button class="btn" onclick="agregarCarrito('Urban Pack')">Comprar</button>
+                        <h3>Urban Backpack Originals</h3>
+                        <p class="product-desc">Espacio acolchado para laptop de hasta 15", cierres reforzados y cuerpo completo de PVC publicitario recuperado. Completamente impermeable.</p>
+                        <div class="product-footer">
+                            <div class="product-price">S/ 179.00</div>
+                            <button class="btn btn-sm" onclick="addToCart('Urban Backpack', 179)">Añadir</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Producto 2 -->
                 <div class="product-card">
-                    <div class="product-img" style="background: linear-gradient(135deg, #0277bd, #001f3f);">
-                        ROLLTOP ADVENTURE
+                    <div class="product-img-holder">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17158947851820568289" alt="Daily Tote Bag">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">Rolltop Adventure</h3>
-                        <p class="product-desc">Diseño expandible ideal para ciclistas y viajeros. Cierre hermético superior y espalda acolchada con material respirable.</p>
-                        <div class="product-price">S/ 189.00</div>
-                        <button class="btn" onclick="agregarCarrito('Rolltop Adventure')">Comprar</button>
+                        <h3>Daily Tote Bag</h3>
+                        <p class="product-desc">Asas de alta resistencia para peso pesado. Diseños gráficos aleatorios provenientes de paneles de la ciudad. Estilo minimalista.</p>
+                        <div class="product-footer">
+                            <div class="product-price">S/ 89.00</div>
+                            <button class="btn btn-sm" onclick="addToCart('Daily Tote Bag', 89)">Añadir</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Producto 3 -->
                 <div class="product-card">
-                    <div class="product-img" style="background: linear-gradient(135deg, #f57c00, #e65100);">
-                        MINI ECO SLING
+                    <div class="product-img-holder">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/14412710982919173574" alt="Pouch Utility">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">Mini Eco Sling</h3>
-                        <p class="product-desc">Mochila cruzada ligera para llevar lo esencial (celular, llaves, billetera). Estilo urbano, cómodo y sumamente resistente.</p>
-                        <div class="product-price">S/ 89.00</div>
-                        <button class="btn" onclick="agregarCarrito('Mini Eco Sling')">Comprar</button>
+                        <h3>Pouch Organizer Utility</h3>
+                        <p class="product-desc">Tu organizador de cables, cosméticos o herramientas del día a día. Construido con mermas de PVC de alta flexibilidad.</p>
+                        <div class="product-footer">
+                            <div class="product-price">S/ 45.00</div>
+                            <button class="btn btn-sm" onclick="addToCart('Pouch Utility', 45)">Añadir</button>
+                        </div>
                     </div>
                 </div>
 
@@ -306,17 +560,104 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <div id="sidebar-cart" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Pedido</h3>
+            <button class="close-cart" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="cart-items" class="cart-items-container">
+            <p style="color: var(--text-muted); text-align: center; margin-top: 2rem;">El carrito está vacío</p>
+        </div>
+        <div class="cart-footer-panel">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cart-total-price">S/ 0.00</span>
+            </div>
+            <button class="btn" style="width: 100%;" onclick="checkout()">Procesar Compra</button>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
-            <p>&copy; 2026 ECO-REBORN Perú - Moda Sostenible y Consciente. Todos los derechos reservados.</p>
+            <div class="footer-grid">
+                <a href="#inicio" class="footer-logo">ECO-<span>REBORN</span></a>
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 ECO-REBORN Perú - Manufactura Local y Sostenible. Lima, Perú.
+            </div>
         </div>
     </footer>
 
-    <!-- LÓGICA JAVASCRIPT -->
     <script>
-        function agregarCarrito(nombreProducto) {
-            alert(`¡Genial! Has añadido la mochila "${nombreProducto}" a tu carrito de compras.`);
+        let cart = [];
+
+        function toggleCart() {
+            const sidebar = document.getElementById('sidebar-cart');
+            sidebar.classList.toggle('open');
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCartUI();
+            
+            // Abre automáticamente el carrito al añadir un producto
+            const sidebar = document.getElementById('sidebar-cart');
+            if(!sidebar.classList.contains('open')) {
+                sidebar.classList.add('open');
+            }
+        }
+
+        function updateCartUI() {
+            // Actualizar número del header
+            document.getElementById('cart-count').innerText = cart.length;
+
+            const container = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                container.innerHTML = `<p style="color: var(--text-muted); text-align: center; margin-top: 2rem;">El carrito está vacío</p>`;
+                document.getElementById('cart-total-price').innerText = 'S/ 0.00';
+                return;
+            }
+
+            container.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                container.innerHTML += `
+                    <div class="cart-item">
+                        <div>
+                            <h4 style="color: white; font-size: 1.1rem;">${item.name}</h4>
+                            <span style="color: var(--primary-color); font-weight: bold;">S/ ${item.price}.00</span>
+                        </div>
+                        <button onclick="removeItem(${index})" style="background:none; border:none; color: #ff5252; cursor:pointer;">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                `;
+            });
+
+            document.getElementById('cart-total-price').innerText = `S/ ${total}.00`;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function checkout() {
+            if(cart.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+            alert("¡Pedido recibido! Redirigiendo a la pasarela de pago seguro para Lima/Provincias.");
+            cart = [];
+            updateCartUI();
+            toggleCart();
         }
     </script>
 </body>
