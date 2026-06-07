@@ -492,7 +492,7 @@
         </div>
     </section>
 
-    <!-- CONCEPTO CON IMÁGENES LIBERADAS -->
+    <!-- CONCEPTO CON ENLACES ESTABLES -->
     <section id="concepto" class="section-padding">
         <div class="container concept-grid">
             <div class="concept-text">
@@ -501,15 +501,14 @@
                 <p>A través de un proceso artesanal de corte y confección local, las texturas gráficas aleatorias dan vida a accesorios de <span class="accent">resistencia industrial</span> listos para el ritmo urbano.</p>
             </div>
             <div class="image-collage">
-                <!-- Imagen 1: Lona/Totebag Verde con Logo -->
-                <img src="https://i.ibb.co/zH9gbyYf/image-5ed846.png" alt="ECO-REBORN Mercado Sostenible">
-                <!-- Imagen 2: Detalle de costura y parche de Mochila -->
-                <img src="https://i.ibb.co/C3mXPgYw/image-5ed865.png" alt="Detalle Mochila Circular ECO-REBORN">
+                <!-- Imagen de lona y taller (Enlaces Estables) -->
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop" alt="Texturas Abstractas Recicladas">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Manufactura Local Sostenible">
             </div>
         </div>
     </section>
 
-    <!-- TIENDA / CATÁLOGO CON PRECIOS EN SOLES -->
+    <!-- TIENDA / CATÁLOGO -->
     <section id="productos" class="section-padding" style="background-color: #0A0A0A;">
         <div class="container">
             <h2 class="section-title">Catálogo Oficial</h2>
@@ -518,8 +517,8 @@
                 <!-- Producto 1: Mochila Urbana -->
                 <div class="product-card">
                     <div class="product-img-holder">
-                        <span class="product-badge">Único en su Clase</span>
-                        <img src="https://i.ibb.co/VWVgG69g/image-5ed881.png" alt="Mochila Urban Backpack Reborn">
+                        <span class="product-badge">Edición Limitada</span>
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop" alt="Urban Backpack Reborn">
                     </div>
                     <div class="product-info">
                         <h3>Urban Backpack Reborn</h3>
@@ -531,17 +530,32 @@
                     </div>
                 </div>
 
-                <!-- Producto 2: Combo Tote + Pouch -->
+                <!-- Producto 2: Eco Tote -->
                 <div class="product-card">
                     <div class="product-img-holder">
-                        <img src="https://i.ibb.co/wZpZgV0r/image-5ed885.png" alt="Combo Eco Tote Urban">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop" alt="Eco Tote Urban">
                     </div>
                     <div class="product-info">
-                        <h3>Eco Tote + Pouch Utility</h3>
-                        <p class="product-desc">El juego urbano definitivo. Un espacioso bolso de mano con asas reforzadas acompañado de su estuche organizador para cables, llaves o cosméticos.</p>
+                        <h3>Eco Tote Bag</h3>
+                        <p class="product-desc">El bolso urbano definitivo. Espacioso, con asas reforzadas para soportar el peso diario y texturas gráficas únicas recuperadas de paneles de la ciudad.</p>
                         <div class="product-footer">
-                            <div class="product-price">S/ 119.00</div>
-                            <button class="btn btn-sm" onclick="addToCart('Eco Tote + Pouch Utility', 119)">Añadir</button>
+                            <div class="product-price">S/ 89.00</div>
+                            <button class="btn btn-sm" onclick="addToCart('Eco Tote Bag', 89)">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Pouch Organizer -->
+                <div class="product-card">
+                    <div class="product-img-holder">
+                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop" alt="Pouch Utility Organizer">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pouch Utility Organizer</h3>
+                        <p class="product-desc">Estuche compacto ideal para cables, llaves o cosméticos. Construido con mermas seleccionadas de lonas de PVC de alta flexibilidad.</p>
+                        <div class="product-footer">
+                            <div class="product-price">S/ 45.00</div>
+                            <button class="btn btn-sm" onclick="addToCart('Pouch Utility Organizer', 45)">Añadir</button>
                         </div>
                     </div>
                 </div>
