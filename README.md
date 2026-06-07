@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECO-REBORN | Moda Circular & Upcycled Perú</title>
+    <title>ECO-REBORN | Moda Circular Upcycled</title>
     
+    <!-- Tipografías Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- CONFIGURACIÓN ESTÉTICA PREMIUM (Modo Oscuro) --- */
+        /* --- CONFIGURACIÓN ESTÉTICA EN MODO OSCURO --- */
         :root {
             --primary-color: #2e7d32;
             --primary-dark: #1b5e20;
@@ -116,9 +118,9 @@
 
         /* --- HERO --- */
         .hero {
-            background: linear-gradient(rgba(15,15,15,0.7), rgba(15,15,15,0.95)), 
+            background: linear-gradient(rgba(15,15,15,0.8), rgba(15,15,15,0.95)), 
                         url('https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
-            height: 75vh;
+            height: 60vh;
             display: flex;
             align-items: center;
         }
@@ -183,30 +185,10 @@
 
         .accent { color: var(--primary-color); font-weight: 600; }
 
-        .image-collage {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .image-collage img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid #222;
-        }
-
-        /* --- STATS --- */
-        .stats-bg { background-color: #0A0A0A; border-top: 1px solid #111; border-bottom: 1px solid #111; }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center; }
-        .stat-item .number { font-size: 4.5rem; font-weight: 700; color: var(--primary-color); font-family: 'Space Grotesk', sans-serif; }
-        .stat-item p { color: var(--text-muted); font-size: 1rem; }
-
-        /* --- PRODUCTOS --- */
+        /* --- CATÁLOGO DE PRODUCTOS (Mochilas y Cartucheras) --- */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2.5rem;
         }
 
@@ -227,10 +209,10 @@
 
         .product-img-holder {
             width: 100%;
-            height: 350px;
+            height: 380px;
             overflow: hidden;
             position: relative;
-            background-color: #050505;
+            background-color: #0A0A0A;
         }
 
         .product-img-holder img {
@@ -249,10 +231,11 @@
             font-size: 0.8rem;
             font-weight: 700;
             border-radius: 4px;
+            text-transform: uppercase;
         }
 
         .product-info { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
-        .product-info h3 { font-size: 1.4rem; color: var(--white); margin-bottom: 0.5rem; }
+        .product-info h3 { font-size: 1.5rem; color: var(--white); margin-bottom: 0.5rem; }
         .product-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
         
         .product-footer {
@@ -263,7 +246,7 @@
             border-top: 1px solid #222;
         }
 
-        .product-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--white); }
+        .product-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--white); }
         .btn-sm { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
 
         /* --- CARRITO SIDEBAR --- */
@@ -302,32 +285,30 @@
         .total-row { display: flex; justify-content: space-between; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1.5rem; }
 
         /* --- FOOTER --- */
-        footer { background-color: #0A0A0A; border-top: 1px solid #222; padding: 4rem 0 2rem 0; }
-        .footer-grid { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; }
-        .footer-logo { font-size: 2rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        footer { background-color: #0A0A0A; border-top: 1px solid #222; padding: 3rem 0; }
+        .footer-grid { display: flex; justify-content: space-between; align-items: center; }
+        .footer-logo { font-size: 1.8rem; font-weight: 700; color: var(--white); text-decoration: none; }
         .footer-logo span { color: var(--primary-color); }
-        .footer-socials a { color: var(--text-muted); font-size: 1.5rem; margin-left: 1.5rem; }
-        .footer-copy { text-align: center; color: #555; font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid #111; }
+        .footer-copy { text-align: center; color: #555; font-size: 0.9rem; margin-top: 2rem; border-top: 1px solid #111; padding-top: 1.5rem; }
 
         @media (max-width: 768px) {
             .concept-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .stats-grid { grid-template-columns: 1fr; gap: 3rem; }
             .hero-content h1 { font-size: 3rem; }
             .cart-sidebar { width: 100%; right: -100%; }
-            .footer-grid { flex-direction: column; gap: 2rem; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
+    <!-- MENÚ -->
     <header>
         <div class="container navbar">
             <a href="#inicio" class="logo">ECO-<span>REBORN</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#concepto">Concepto</a></li>
-                <li><a href="#productos">Productos</a></li>
+                <li><a href="#concepto">Materiales</a></li>
+                <li><a href="#productos">Colección</a></li>
                 <li>
                     <button class="cart-icon-btn" onclick="toggleCart()">
                         <i class="fa-solid fa-bag-shopping"></i>
@@ -338,77 +319,70 @@
         </div>
     </header>
 
+    <!-- HERO -->
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>ECO-REBORN</h1>
-                <p>Moda Up-cycled con Impacto Circular. Transformamos residuos de lona publicitaria y PVC en el futuro del estilo urbano de Lima.</p>
-                <a href="#productos" class="btn">Explorar Catálogo</a>
+                <h1>Fusión Urbana</h1>
+                <p>Presentamos la nueva línea que combina la resistencia impermeable de las lonas de PVC upcycled con la textura clásica del Denim de Jeans reciclados.</p>
+                <a href="#productos" class="btn">Ver Colección</a>
             </div>
         </div>
     </section>
 
-    <section class="section-padding stats-bg">
-        <div class="container stats-grid">
-            <div class="stat-item">
-                <div class="number">500</div>
-                <p>Años tarda el PVC de un banner en degradarse.</p>
-            </div>
-            <div class="stat-item">
-                <div class="number">100%</div>
-                <p>Impermeable y de patrón único irrepetible.</p>
-            </div>
-            <div class="stat-item">
-                <div class="number">0%</div>
-                <p>Residuos plásticos añadidos. Economía circular.</p>
-            </div>
-        </div>
-    </section>
-
+    <!-- CONCEPTO MOCARTI -->
     <section id="concepto" class="section-padding">
         <div class="container concept-grid">
             <div class="concept-text">
-                <h2 class="section-title">Diseño con Conciencia</h2>
-                <p>Cada año, toneladas de gigantografías publicitarias terminan en vertederos peruanos. Interceptamos este material antes de que sea basura.</p>
-                <p>A través de un proceso artesanal de corte y confección local, las texturas dan vida a accesorios de <span class="accent">resistencia industrial</span>.</p>
+                <h2 class="section-title">PVC + Denim Reciclado</h2>
+                <p>Nuestra nueva colección rompe los esquemas de la moda circular. Unimos los retazos de <span class="accent">tela de jeans seleccionados</span> con el carácter rudo de los banners publicitarios de PVC.</p>
+                <p>Cada pieza lleva un sello distintivo de confección local, diseñado en armonía estética con nuestro logo <span class="accent">mocarti</span> y fondos oscuros de alto contraste.</p>
             </div>
-            <div class="image-collage">
-                <img src="concepto1.png" alt="Eco Reborn Lona Verde">
-                <img src="concepto2.png" alt="Detalle Mochila Upcycled">
+            <div class="concept-text" style="border-left: 1px solid #222; padding-left: 30px;">
+                <h3 style="color: white; margin-bottom: 1rem;">Especificaciones Técnicas</h3>
+                <p style="font-size: 1rem;">• Costuras reforzadas de resistencia industrial.<br>
+                • Base impermeable de PVC para alta protección.<br>
+                • Cuerpo y detalles en lona denim jean de alta calidad recuperada.</p>
             </div>
         </div>
     </section>
 
+    <!-- SECCIÓN DE PRODUCTOS (RUTAS LOCALES PARA GITHUB) -->
     <section id="productos" class="section-padding" style="background-color: #0A0A0A;">
         <div class="container">
-            <h2 class="section-title">Catálogo Oficial</h2>
+            <h2 class="section-title">Nueva Línea de Accesorios</h2>
             <div class="product-grid">
 
+                <!-- PRODUCTO 1: MOCHILA -->
                 <div class="product-card">
                     <div class="product-img-holder">
-                        <span class="product-badge">Edición Única</span>
-                        <img src="mochila.png" alt="Urban Backpack Reborn">
+                        <span class="product-badge">PVC + Denim</span>
+                        <!-- RUTA DIRECTA DE GITHUB SIN ENLACES EXTERNOS -->
+                        <img src="mochila.png" alt="Mochila Urbana de PVC y Jean - mocarti">
                     </div>
                     <div class="product-info">
-                        <h3>Urban Backpack Reborn</h3>
-                        <p class="product-desc">Compartimento acolchado para laptop de hasta 15", cierres reforzados y cuerpo de PVC recuperado. Impermeable.</p>
+                        <h3>Mochila Urban Denim-PVC</h3>
+                        <p class="product-desc">Estructura cuadrada minimalista. Cuerpo confeccionado con lona de PVC recuperada gris industrial y compartimentos externos hechos de tela de jean azul clásico. Incluye el parche frontal de mocarti.</p>
                         <div class="product-footer">
-                            <div class="product-price">S/ 179.00</div>
-                            <button class="btn btn-sm" onclick="addToCart('Urban Backpack Reborn', 179)">Añadir</button>
+                            <div class="product-price">S/ 185.00</div>
+                            <button class="btn btn-sm" onclick="addToCart('Mochila Urban Denim-PVC', 185)">Añadir</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- PRODUCTO 2: CARTUCHERA -->
                 <div class="product-card">
                     <div class="product-img-holder">
-                        <img src="combo.png" alt="Eco Tote Bag mas Pouch">
+                        <span class="product-badge">Nuevo Ingreso</span>
+                        <!-- RUTA DIRECTA DE GITHUB SIN ENLACES EXTERNOS -->
+                        <img src="cartuchera.png" alt="Cartuchera Pouch de PVC y Jean - mocarti">
                     </div>
                     <div class="product-info">
-                        <h3>Eco Tote + Pouch Utility</h3>
-                        <p class="product-desc">El juego urbano definitivo. Un amplio bolso de mano resistente al peso diario junto a su estuche organizador multiusos.</p>
+                        <h3>Cartuchera Pouch Industrial</h3>
+                        <p class="product-desc">Estuche organizador multiusos. Base inferior de PVC verde oliva altamente resistente al desgaste y mitad superior hecha de mezclilla de jean con cierre industrial negro. Logo mocarti lateral.</p>
                         <div class="product-footer">
-                            <div class="product-price">S/ 119.00</div>
-                            <button class="btn btn-sm" onclick="addToCart('Eco Tote + Pouch Utility', 119)">Añadir</button>
+                            <div class="product-price">S/ 49.00</div>
+                            <button class="btn btn-sm" onclick="addToCart('Cartuchera Pouch Industrial', 49)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -417,6 +391,7 @@
         </div>
     </section>
 
+    <!-- INTERFAZ DEL CARRITO -->
     <div id="sidebar-cart" class="cart-sidebar">
         <div class="cart-header">
             <h3>Tu Pedido</h3>
@@ -434,17 +409,15 @@
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <a href="#inicio" class="footer-logo">ECO-<span>REBORN</span></a>
-                <div class="footer-socials">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">By mocarti © 2026</p>
             </div>
             <div class="footer-copy">
-                &copy; 2026 ECO-REBORN Perú - Manufactura Sostenible. Lima.
+                Hecho en Lima, Perú - Moda Sostenible de Larga Duración.
             </div>
         </div>
     </footer>
@@ -484,7 +457,7 @@
         }
 
         function removeItem(index) { cart.splice(index, 1); updateCartUI(); }
-        function checkout() { alert("¡Pedido recibido! Conectando pasarela."); cart = []; updateCartUI(); toggleCart(); }
+        function checkout() { alert("Pedido recibido de la línea Denim/PVC."); cart = []; updateCartUI(); toggleCart(); }
     </script>
 </body>
 </html>
