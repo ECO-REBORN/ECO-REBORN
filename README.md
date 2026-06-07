@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECO-REBORN | Moda Circular & Upcycled Perú</title>
     
+    <!-- Tipografías Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Urbanis********t:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- VARIABLES Y CONFIGURACIÓN PREMIUM (Inspirado en el Deck) --- */
+        /* --- VARIABLES Y CONFIGURACIÓN PREMIUM --- */
         :root {
             --primary-color: #2e7d32;
             --primary-dark: #1b5e20;
@@ -94,7 +96,7 @@
             transition: var(--transition);
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover {
             color: var(--white);
         }
 
@@ -127,12 +129,6 @@
             display: flex;
             align-items: center;
             position: relative;
-        }
-
-        .hero::before {
-            content: ''; position: absolute; top: 0; right: 0;
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(46, 125, 50, 0.15) 0%, transparent 70%);
         }
 
         .hero-content h1 {
@@ -212,8 +208,8 @@
             border: 1px solid #222;
         }
 
-        /* --- STATS GRID (Del Deck) --- */
-        .stats-bg { background-color: #0A0A0A; border-y: 1px solid #222; }
+        /* --- STATS GRID --- */
+        .stats-bg { background-color: #0A0A0A; }
         
         .stats-grid {
             display: grid;
@@ -437,24 +433,24 @@
             padding-top: 2rem;
         }
 
-        /* Responsivo */
         @media (max-width: 768px) {
             .concept-grid { grid-template-columns: 1fr; gap: 2rem; }
             .stats-grid { grid-template-columns: 1fr; gap: 3rem; }
             .hero-content h1 { font-size: 3.2rem; }
             .cart-sidebar { width: 100%; right: -100%; }
             .footer-grid { flex-direction: column; gap: 2rem; text-align: center; }
-            .nav-links { display: none; } /* Simplificado para móviles */
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
+    <!-- MENÚ / NAVEGACIÓN -->
     <header>
         <div class="container navbar">
             <a href="#inicio" class="logo">ECO-<span>REBORN</span></a>
             <ul class="nav-links">
-                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#concepto">Concepto</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li>
@@ -467,6 +463,7 @@
         </div>
     </header>
 
+    <!-- HERO SECTION -->
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -477,23 +474,25 @@
         </div>
     </section>
 
+    <!-- MÉTRICAS DE IMPACTO -->
     <section class="section-padding stats-bg">
         <div class="container stats-grid">
             <div class="stat-item">
                 <div class="number">500</div>
-                <p>Años tarda el PVC de un banner tradicional en degradarse.</p>
+                <p>Años tarda el PVC de un banner publicitario tradicional en degradarse.</p>
             </div>
             <div class="stat-item">
                 <div class="number">100%</div>
-                <p>Impermeable y de patrón gráfico único irrepetible.</p>
+                <p>Impermeable, ultrarresistente y de patrón gráfico irrepetible.</p>
             </div>
             <div class="stat-item">
                 <div class="number">0%</div>
-                <p>Residuos plásticos añadidos. Economía circular pura.</p>
+                <p>Residuos plásticos añadidos. Economía e industria circular pura.</p>
             </div>
         </div>
     </section>
 
+    <!-- CONCEPTO CON IMÁGENES LIBERADAS -->
     <section id="concepto" class="section-padding">
         <div class="container concept-grid">
             <div class="concept-text">
@@ -502,56 +501,47 @@
                 <p>A través de un proceso artesanal de corte y confección local, las texturas gráficas aleatorias dan vida a accesorios de <span class="accent">resistencia industrial</span> listos para el ritmo urbano.</p>
             </div>
             <div class="image-collage">
-                C:\Users\PC\Downloads\WhatsApp Image 2026-05-21 at 10.02.01 PM.jpeg
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/18072100707645766408" alt="Detalle de parche ECO-REBORN">
+                <!-- Imagen 1: Lona/Totebag Verde con Logo -->
+                <img src="https://i.ibb.co/zH9gbyYf/image-5ed846.png" alt="ECO-REBORN Mercado Sostenible">
+                <!-- Imagen 2: Detalle de costura y parche de Mochila -->
+                <img src="https://i.ibb.co/C3mXPgYw/image-5ed865.png" alt="Detalle Mochila Circular ECO-REBORN">
             </div>
         </div>
     </section>
 
+    <!-- TIENDA / CATÁLOGO CON PRECIOS EN SOLES -->
     <section id="productos" class="section-padding" style="background-color: #0A0A0A;">
         <div class="container">
             <h2 class="section-title">Catálogo Oficial</h2>
             <div class="product-grid">
 
+                <!-- Producto 1: Mochila Urbana -->
                 <div class="product-card">
                     <div class="product-img-holder">
-                        <span class="product-badge">Edición Única</span>
-                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop" alt="Urban Backpack">
+                        <span class="product-badge">Único en su Clase</span>
+                        <img src="https://i.ibb.co/VWVgG69g/image-5ed881.png" alt="Mochila Urban Backpack Reborn">
                     </div>
                     <div class="product-info">
-                        <h3>Urban Backpack Originals</h3>
-                        <p class="product-desc">Espacio acolchado para laptop de hasta 15", cierres reforzados y cuerpo completo de PVC publicitario recuperado. Completamente impermeable.</p>
+                        <h3>Urban Backpack Reborn</h3>
+                        <p class="product-desc">Compartimento acolchado para laptop de hasta 15", espaldar ergonómico y cuerpo completo de PVC publicitario recuperado. 100% a prueba de agua.</p>
                         <div class="product-footer">
                             <div class="product-price">S/ 179.00</div>
-                            <button class="btn btn-sm" onclick="addToCart('Urban Backpack', 179)">Añadir</button>
+                            <button class="btn btn-sm" onclick="addToCart('Urban Backpack Reborn', 179)">Añadir</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Producto 2: Combo Tote + Pouch -->
                 <div class="product-card">
                     <div class="product-img-holder">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17158947851820568289" alt="Daily Tote Bag">
+                        <img src="https://i.ibb.co/wZpZgV0r/image-5ed885.png" alt="Combo Eco Tote Urban">
                     </div>
                     <div class="product-info">
-                        <h3>Daily Tote Bag</h3>
-                        <p class="product-desc">Asas de alta resistencia para peso pesado. Diseños gráficos aleatorios provenientes de paneles de la ciudad. Estilo minimalista.</p>
+                        <h3>Eco Tote + Pouch Utility</h3>
+                        <p class="product-desc">El juego urbano definitivo. Un espacioso bolso de mano con asas reforzadas acompañado de su estuche organizador para cables, llaves o cosméticos.</p>
                         <div class="product-footer">
-                            <div class="product-price">S/ 89.00</div>
-                            <button class="btn btn-sm" onclick="addToCart('Daily Tote Bag', 89)">Añadir</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img-holder">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/14412710982919173574" alt="Pouch Utility">
-                    </div>
-                    <div class="product-info">
-                        <h3>Pouch Organizer Utility</h3>
-                        <p class="product-desc">Tu organizador de cables, cosméticos o herramientas del día a día. Construido con mermas de PVC de alta flexibilidad.</p>
-                        <div class="product-footer">
-                            <div class="product-price">S/ 45.00</div>
-                            <button class="btn btn-sm" onclick="addToCart('Pouch Utility', 45)">Añadir</button>
+                            <div class="product-price">S/ 119.00</div>
+                            <button class="btn btn-sm" onclick="addToCart('Eco Tote + Pouch Utility', 119)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -560,6 +550,7 @@
         </div>
     </section>
 
+    <!-- SIDEBAR DEL CARRITO INTERACTIVO -->
     <div id="sidebar-cart" class="cart-sidebar">
         <div class="cart-header">
             <h3>Tu Pedido</h3>
@@ -577,6 +568,7 @@
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -593,6 +585,7 @@
         </div>
     </footer>
 
+    <!-- LÓGICA JAVASCRIPT DEL CARRITO -->
     <script>
         let cart = [];
 
@@ -605,7 +598,6 @@
             cart.push({ name, price });
             updateCartUI();
             
-            // Abre automáticamente el carrito al añadir un producto
             const sidebar = document.getElementById('sidebar-cart');
             if(!sidebar.classList.contains('open')) {
                 sidebar.classList.add('open');
@@ -613,10 +605,9 @@
         }
 
         function updateCartUI() {
-            // Actualizar número del header
             document.getElementById('cart-count').innerText = cart.length;
-
             const container = document.getElementById('cart-items');
+            
             if (cart.length === 0) {
                 container.innerHTML = `<p style="color: var(--text-muted); text-align: center; margin-top: 2rem;">El carrito está vacío</p>`;
                 document.getElementById('cart-total-price').innerText = 'S/ 0.00';
@@ -654,7 +645,7 @@
                 alert("Tu carrito está vacío.");
                 return;
             }
-            alert("¡Pedido recibido! Redirigiendo a la pasarela de pago seguro para Lima/Provincias.");
+            alert("¡Pedido recibido con éxito! Redirigiendo a la pasarela de pago seguro.");
             cart = [];
             updateCartUI();
             toggleCart();
