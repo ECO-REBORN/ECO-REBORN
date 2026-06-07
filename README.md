@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECO-REBORN | Moda Circular Upcycled</title>
+    <title>ECO-REBORN | Conciencia Urbana & Upcycling</title>
     
     <!-- Tipografías Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- CONFIGURACIÓN ESTÉTICA EN MODO OSCURO --- */
+        /* --- ESTILEADO PREMIUM MODO OSCURO --- */
         :root {
             --primary-color: #2e7d32;
             --primary-dark: #1b5e20;
@@ -116,11 +116,12 @@
             border-radius: 50%;
         }
 
-        /* --- HERO --- */
+        /* --- HERO DE ENTRADA --- */
         .hero {
-            background: linear-gradient(rgba(15,15,15,0.8), rgba(15,15,15,0.95)), 
-                        url('https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
-            height: 60vh;
+            /* Imagen de fondo relacionada a texturas textiles urbanas */
+            background: linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.95)), 
+                        url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+            height: 65vh;
             display: flex;
             align-items: center;
         }
@@ -185,22 +186,15 @@
 
         .accent { color: var(--primary-color); font-weight: 600; }
 
-        /* --- IMÁGENES DEL CONCEPTO --- */
-        .concept-images {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .concept-images img {
+        .concept-image-wrapper img {
             width: 100%;
-            height: 250px;
+            height: 380px;
             object-fit: cover;
             border-radius: 8px;
             border: 1px solid #222;
         }
 
-        /* --- CATÁLOGO DE PRODUCTOS (Mochilas y Cartucheras) --- */
+        /* --- CUADRÍCULA DE PRODUCTOS --- */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -264,7 +258,7 @@
         .product-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--white); }
         .btn-sm { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
 
-        /* --- CARRITO SIDEBAR --- */
+        /* --- INTERFAZ CARRITO SIDEBAR --- */
         .cart-sidebar {
             position: fixed;
             top: 0;
@@ -316,14 +310,14 @@
 </head>
 <body>
 
-    <!-- MENÚ -->
+    <!-- NAVEGACIÓN -->
     <header>
         <div class="container navbar">
             <a href="#inicio" class="logo">ECO-<span>REBORN</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#concepto">Materiales</a></li>
-                <li><a href="#productos">Colección</a></li>
+                <li><a href="#concepto">Proceso</a></li>
+                <li><a href="#productos">Productos</a></li>
                 <li>
                     <button class="cart-icon-btn" onclick="toggleCart()">
                         <i class="fa-solid fa-bag-shopping"></i>
@@ -334,68 +328,68 @@
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- BANNER PRINCIPAL (HERO) -->
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Fusión Urbana</h1>
-                <p>Presentamos la nueva línea que combina la resistencia impermeable de las lonas de PVC upcycled con la textura clásica del Denim de Jeans reciclados.</p>
-                <a href="#productos" class="btn">Ver Colección</a>
+                <h1>Mocarti Design</h1>
+                <p>Estética upcycled de alta resistencia. Creamos piezas únicas a partir de mezclilla denim recuperada y materiales de lona sintética industrial.</p>
+                <a href="#productos" class="btn">Explorar Tienda</a>
             </div>
         </div>
     </section>
 
-    <!-- CONCEPTO MOCARTI -->
+    <!-- SECCIÓN CONCEPTO / PROCESO (Imagen relacionada de mezclilla/confección sustentable) -->
     <section id="concepto" class="section-padding">
         <div class="container concept-grid">
             <div class="concept-text">
-                <h2 class="section-title">PVC + Denim Reciclado</h2>
-                <p>Nuestra nueva colección rompe los esquemas de la moda circular. Unimos los retazos de <span class="accent">tela de jeans seleccionados</span> con el carácter rudo de los banners publicitarios de PVC.</p>
-                <p>Cada pieza lleva un sello distintivo de confección local, diseñado en armonía estética con nuestro logo <span class="accent">mocarti</span> y fondos oscuros de alto contraste.</p>
+                <h2 class="section-title">El Arte del Upcycling</h2>
+                <p>No creamos materiales nuevos; transformamos los que ya cumplieron un ciclo. Seleccionamos cuidadosamente <span class="accent">telas de jean densas</span> y las fusionamos con soportes impermeables de PVC reciclado.</p>
+                <p>Cada accesorio es cosido artesanalmente en Lima, garantizando un patrón geométrico exclusivo y una durabilidad extrema para el uso diario en la ciudad.</p>
             </div>
-            <div class="concept-images">
-                <!-- ENLACE WEB EN VIVO QUE NUNCA FALLARÁ (Textura Denim/Jean Sostenible) -->
-                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=600&auto=format&fit=crop" alt="Eco Reborn Lona Verde y Denim">
+            <div class="concept-image-wrapper">
+                <!-- Imagen relacionada: Textura de Jean Denim de alta resistencia (Inmune a bloqueos) -->
+                <img src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09?q=80&w=600&auto=format&fit=crop" alt="Textura Denim Reciclado Sostenible">
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE PRODUCTOS (ENLACES GLOBALES INMUNIADOS A BLOQUEOS) -->
+    <!-- SECCIÓN DE PRODUCTOS (Mochilas y Organizadores con imágenes conceptuales inmunes) -->
     <section id="productos" class="section-padding" style="background-color: #0A0A0A;">
         <div class="container">
-            <h2 class="section-title">Nueva Línea de Accesorios</h2>
+            <h2 class="section-title">Catálogo de Productos</h2>
             <div class="product-grid">
 
                 <!-- PRODUCTO 1: MOCHILA URBANA -->
                 <div class="product-card">
                     <div class="product-img-holder">
-                        <span class="product-badge">PVC + Denim</span>
-                        <!-- ENLACE WEB DIRECTO DE MOCHILA URBANA -->
-                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop" alt="Mochila Urbana de PVC y Jean - mocarti">
+                        <span class="product-badge">Hecho a Mano</span>
+                        <!-- Imagen relacionada: Mochila de diseño urbano con texturas industriales oscuras -->
+                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop" alt="Mochila Diseño Urbano Upcycled">
                     </div>
                     <div class="product-info">
-                        <h3>Mochila Urban Denim-PVC</h3>
-                        <p class="product-desc">Estructura cuadrada minimalista. Cuerpo confeccionado con lona de PVC recuperada gris industrial y compartimentos externos hechos de tela de jean azul clásico. Incluye el parche frontal de mocarti.</p>
+                        <h3>Mochila Urban Denim & PVC</h3>
+                        <p class="product-desc">Compartimento principal espacioso e impermeable. Diseñada combinando secciones de lona reciclada industrial de PVC negro y acabados frontales en denim azul clásico reforzado. Logotipo mocarti cosido al frente.</p>
                         <div class="product-footer">
                             <div class="product-price">S/ 185.00</div>
-                            <button class="btn btn-sm" onclick="addToCart('Mochila Urban Denim-PVC', 185)">Añadir</button>
+                            <button class="btn btn-sm" onclick="addToCart('Mochila Urban Denim & PVC', 185)">Añadir</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- PRODUCTO 2: CARTUCHERA -->
+                <!-- PRODUCTO 2: CARTUCHERA / MULTIUSOS -->
                 <div class="product-card">
                     <div class="product-img-holder">
-                        <span class="product-badge">Nuevo Ingreso</span>
-                        <!-- ENLACE WEB DIRECTO DE CARTUCHERA/POUCH -->
-                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop" alt="Cartuchera Pouch de PVC y Jean - mocarti">
+                        <span class="product-badge">Impermeable</span>
+                        <!-- Imagen relacionada: Estuche, accesorio textil utilitario de lona callejera -->
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop" alt="Cartuchera Pouch de Textura Industrial">
                     </div>
                     <div class="product-info">
-                        <h3>Cartuchera Pouch Industrial</h3>
-                        <p class="product-desc">Estuche organizador multiusos. Base inferior de PVC verde oliva altamente resistente al desgaste y mitad superior hecha de mezclilla de jean con cierre industrial negro. Logo mocarti lateral.</p>
+                        <h3>Cartuchera Pouch Utility</h3>
+                        <p class="product-desc">Estuche cilíndrico de alta resistencia para herramientas, cables o útiles escolares. Base inferior de PVC verde oliva anti-rasgaduras y costura superior en tela de jean azul denim. Cierre negro grueso.</p>
                         <div class="product-footer">
                             <div class="product-price">S/ 49.00</div>
-                            <button class="btn btn-sm" onclick="addToCart('Cartuchera Pouch Industrial', 49)">Añadir</button>
+                            <button class="btn btn-sm" onclick="addToCart('Cartuchera Pouch Utility', 49)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -404,10 +398,10 @@
         </div>
     </section>
 
-    <!-- INTERFAZ DEL CARRITO -->
+    <!-- PANEL LATERAL DEL CARRITO -->
     <div id="sidebar-cart" class="cart-sidebar">
         <div class="cart-header">
-            <h3>Tu Pedido</h3>
+            <h3>Tu Carrito</h3>
             <button class="close-cart" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div id="cart-items" class="cart-items-container">
@@ -418,19 +412,19 @@
                 <span>Total:</span>
                 <span id="cart-total-price">S/ 0.00</span>
             </div>
-            <button class="btn" style="width: 100%;" onclick="checkout()">Procesar Compra</button>
+            <button class="btn" style="width: 100%;" onclick="checkout()">Comprar por WhatsApp</button>
         </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- PIE DE PÁGINA -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <a href="#inicio" class="footer-logo">ECO-<span>REBORN</span></a>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">By mocarti © 2026</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Mocarti Concept © 2026</p>
             </div>
             <div class="footer-copy">
-                Hecho en Lima, Perú - Moda Sostenible de Larga Duración.
+                Confección de alta resistencia - Sostenibilidad desde Lima, Perú.
             </div>
         </div>
     </footer>
@@ -470,7 +464,7 @@
         }
 
         function removeItem(index) { cart.splice(index, 1); updateCartUI(); }
-        function checkout() { alert("Pedido recibido de la línea Denim/PVC."); cart = []; updateCartUI(); toggleCart(); }
+        function checkout() { alert("Redireccionando al WhatsApp de ECO-REBORN para coordinar tu entrega."); cart = []; updateCartUI(); toggleCart(); }
     </script>
 </body>
 </html>
