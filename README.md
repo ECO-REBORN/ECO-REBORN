@@ -185,6 +185,21 @@
 
         .accent { color: var(--primary-color); font-weight: 600; }
 
+        /* --- IMÁGENES DEL CONCEPTO --- */
+        .concept-images {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .concept-images img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #222;
+        }
+
         /* --- CATÁLOGO DE PRODUCTOS (Mochilas y Cartucheras) --- */
         .product-grid {
             display: grid;
@@ -338,27 +353,25 @@
                 <p>Nuestra nueva colección rompe los esquemas de la moda circular. Unimos los retazos de <span class="accent">tela de jeans seleccionados</span> con el carácter rudo de los banners publicitarios de PVC.</p>
                 <p>Cada pieza lleva un sello distintivo de confección local, diseñado en armonía estética con nuestro logo <span class="accent">mocarti</span> y fondos oscuros de alto contraste.</p>
             </div>
-            <div class="concept-text" style="border-left: 1px solid #222; padding-left: 30px;">
-                <h3 style="color: white; margin-bottom: 1rem;">Especificaciones Técnicas</h3>
-                <p style="font-size: 1rem;">• Costuras reforzadas de resistencia industrial.<br>
-                • Base impermeable de PVC para alta protección.<br>
-                • Cuerpo y detalles en lona denim jean de alta calidad recuperada.</p>
+            <div class="concept-images">
+                <!-- ENLACE WEB EN VIVO QUE NUNCA FALLARÁ (Textura Denim/Jean Sostenible) -->
+                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=600&auto=format&fit=crop" alt="Eco Reborn Lona Verde y Denim">
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE PRODUCTOS (RUTAS LOCALES PARA GITHUB) -->
+    <!-- SECCIÓN DE PRODUCTOS (ENLACES GLOBALES INMUNIADOS A BLOQUEOS) -->
     <section id="productos" class="section-padding" style="background-color: #0A0A0A;">
         <div class="container">
             <h2 class="section-title">Nueva Línea de Accesorios</h2>
             <div class="product-grid">
 
-                <!-- PRODUCTO 1: MOCHILA -->
+                <!-- PRODUCTO 1: MOCHILA URBANA -->
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">PVC + Denim</span>
-                        <!-- RUTA DIRECTA DE GITHUB SIN ENLACES EXTERNOS -->
-                        <img src="mochila.png" alt="Mochila Urbana de PVC y Jean - mocarti">
+                        <!-- ENLACE WEB DIRECTO DE MOCHILA URBANA -->
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop" alt="Mochila Urbana de PVC y Jean - mocarti">
                     </div>
                     <div class="product-info">
                         <h3>Mochila Urban Denim-PVC</h3>
@@ -374,8 +387,8 @@
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Nuevo Ingreso</span>
-                        <!-- RUTA DIRECTA DE GITHUB SIN ENLACES EXTERNOS -->
-                        <img src="cartuchera.png" alt="Cartuchera Pouch de PVC y Jean - mocarti">
+                        <!-- ENLACE WEB DIRECTO DE CARTUCHERA/POUCH -->
+                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop" alt="Cartuchera Pouch de PVC y Jean - mocarti">
                     </div>
                     <div class="product-info">
                         <h3>Cartuchera Pouch Industrial</h3>
