@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -332,7 +331,7 @@
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Mocarti Design</h1>
+                <h1>UP-CYCLED</h1>
                 <p>Estética upcycled de alta resistencia. Creamos piezas únicas a partir de mezclilla denim recuperada y materiales de lona sintética industrial.</p>
                 <a href="#productos" class="btn">Explorar Tienda</a>
             </div>
