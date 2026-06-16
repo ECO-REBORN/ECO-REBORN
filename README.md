@@ -370,7 +370,7 @@
                         <h3>Mochila Urban Denim & PVC</h3>
                         <p class="product-desc">Compartimento principal espacioso e impermeable. Diseñada combinando secciones de lona reciclada industrial de PVC negro y acabados frontales en denim azul clásico reforzado. Logotipo mocarti cosido al frente.</p>
                         <div class="product-footer">
-                            <div class="product-price">S/ 185.00</div>
+                            <div class="product-price">S/ 165.00</div>
                             <button class="btn btn-sm" onclick="addToCart('Mochila Urban Denim & PVC', 185)">Añadir</button>
                         </div>
                     </div>
@@ -387,7 +387,7 @@
                         <h3>Cartuchera Pouch Utility</h3>
                         <p class="product-desc">Estuche cilíndrico de alta resistencia para herramientas, cables o útiles escolares. Base inferior de PVC verde oliva anti-rasgaduras y costura superior en tela de jean azul denim. Cierre negro grueso.</p>
                         <div class="product-footer">
-                            <div class="product-price">S/ 49.00</div>
+                            <div class="product-price">S/ 35.00</div>
                             <button class="btn btn-sm" onclick="addToCart('Cartuchera Pouch Utility', 49)">Añadir</button>
                         </div>
                     </div>
