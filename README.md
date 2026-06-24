@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -13,15 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- ESTILEADO PREMIUM MODO OSCURO --- */
+        /* --- ESTILEADO CLARO Y VERDE --- */
         :root {
-            --primary-color: #2e7d32;
-            --primary-dark: #1b5e20;
-            --bg-dark: #0F0F0F;
-            --bg-card: #1A1A1A;
-            --text-light: #E8E5D8;
-            --text-muted: #A0A0A0;
+            --primary-color: #43a047; /* Verde medio */
+            --primary-light: #66bb6a; /* Verde claro */
+            --bg-light: #ffffff; /* Fondo blanco */
+            --bg-card: #f1f8e9; /* Fondo de tarjeta verde muy claro */
+            --text-dark: #212121; /* Texto oscuro principal */
+            --text-muted: #757575; /* Texto oscuro secundario */
             --white: #FFFFFF;
+            --border-light: #e0e0e0;
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
@@ -34,8 +36,8 @@
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -54,8 +56,8 @@
 
         /* --- NAVBAR --- */
         header {
-            background-color: rgba(15, 15, 15, 0.9);
-            border-bottom: 1px solid #222;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid var(--border-light);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -72,7 +74,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--white);
+            color: var(--text-dark);
             text-decoration: none;
         }
 
@@ -93,12 +95,12 @@
             transition: var(--transition);
         }
 
-        .nav-links a:hover { color: var(--white); }
+        .nav-links a:hover { color: var(--primary-color); }
 
         .cart-icon-btn {
             background: none;
             border: none;
-            color: var(--text-light);
+            color: var(--text-dark);
             font-size: 1.3rem;
             cursor: pointer;
             position: relative;
@@ -117,8 +119,7 @@
 
         /* --- HERO DE ENTRADA --- */
         .hero {
-            /* Imagen de fondo relacionada a texturas textiles urbanas */
-            background: linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.95)), 
+            background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), 
                         url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
             height: 65vh;
             display: flex;
@@ -129,7 +130,7 @@
             font-size: 4.5rem;
             line-height: 0.9;
             margin-bottom: 1.5rem;
-            color: var(--white);
+            color: var(--text-dark);
         }
 
         .hero-content p {
@@ -155,7 +156,7 @@
         }
 
         .btn:hover {
-            background-color: var(--primary-dark);
+            background-color: var(--primary-light);
             transform: translateY(-3px);
         }
 
@@ -164,7 +165,7 @@
 
         .section-title {
             font-size: 2.3rem;
-            color: var(--white);
+            color: var(--text-dark);
             margin-bottom: 3rem;
             border-left: 5px solid var(--primary-color);
             padding-left: 20px;
@@ -190,7 +191,7 @@
             height: 380px;
             object-fit: cover;
             border-radius: 8px;
-            border: 1px solid #222;
+            border: 1px solid var(--border-light);
         }
 
         /* --- CUADRÍCULA DE PRODUCTOS --- */
@@ -202,7 +203,7 @@
 
         .product-card {
             background-color: var(--bg-card);
-            border: 1px solid #222;
+            border: 1px solid var(--border-light);
             border-radius: 12px;
             overflow: hidden;
             transition: var(--transition);
@@ -213,6 +214,7 @@
         .product-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         .product-img-holder {
@@ -220,7 +222,7 @@
             height: 380px;
             overflow: hidden;
             position: relative;
-            background-color: #0A0A0A;
+            background-color: var(--white);
         }
 
         .product-img-holder img {
@@ -243,7 +245,7 @@
         }
 
         .product-info { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
-        .product-info h3 { font-size: 1.5rem; color: var(--white); margin-bottom: 0.5rem; }
+        .product-info h3 { font-size: 1.5rem; color: var(--text-dark); margin-bottom: 0.5rem; }
         .product-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
         
         .product-footer {
@@ -251,10 +253,10 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 1.5rem;
-            border-top: 1px solid #222;
+            border-top: 1px solid var(--border-light);
         }
 
-        .product-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--white); }
+        .product-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--text-dark); }
         .btn-sm { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
 
         /* --- INTERFAZ CARRITO SIDEBAR --- */
@@ -264,10 +266,10 @@
             right: -400px;
             width: 400px;
             height: 100vh;
-            background-color: var(--bg-card);
-            border-left: 1px solid #222;
+            background-color: var(--bg-light);
+            border-left: 1px solid var(--border-light);
             z-index: 2000;
-            box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+            box-shadow: -10px 0 30px rgba(0,0,0,0.05);
             transition: var(--transition);
             padding: 2.5rem;
             display: flex;
@@ -275,7 +277,7 @@
         }
 
         .cart-sidebar.open { right: 0; }
-        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid #222; padding-bottom: 1rem; }
+        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem; }
         .close-cart { background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; }
         .cart-items-container { flex-grow: 1; overflow-y: auto; }
         
@@ -284,20 +286,21 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1.5rem;
-            background: #111;
+            background: var(--white);
             padding: 10px;
             border-radius: 6px;
+            border: 1px solid var(--border-light);
         }
 
-        .cart-footer-panel { border-top: 1px solid #222; padding-top: 1.5rem; }
-        .total-row { display: flex; justify-content: space-between; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1.5rem; }
+        .cart-footer-panel { border-top: 1px solid var(--border-light); padding-top: 1.5rem; }
+        .total-row { display: flex; justify-content: space-between; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1.5rem; color: var(--text-dark); }
 
         /* --- FOOTER --- */
-        footer { background-color: #0A0A0A; border-top: 1px solid #222; padding: 3rem 0; }
+        footer { background-color: var(--bg-card); border-top: 1px solid var(--border-light); padding: 3rem 0; }
         .footer-grid { display: flex; justify-content: space-between; align-items: center; }
-        .footer-logo { font-size: 1.8rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .footer-logo { font-size: 1.8rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
         .footer-logo span { color: var(--primary-color); }
-        .footer-copy { text-align: center; color: #555; font-size: 0.9rem; margin-top: 2rem; border-top: 1px solid #111; padding-top: 1.5rem; }
+        .footer-copy { text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; border-top: 1px solid var(--border-light); padding-top: 1.5rem; }
 
         @media (max-width: 768px) {
             .concept-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -331,14 +334,14 @@
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>UP-CYCLED</h1>
+                <h1>Mocarti Design</h1>
                 <p>Estética upcycled de alta resistencia. Creamos piezas únicas a partir de mezclilla denim recuperada y materiales de lona sintética industrial.</p>
                 <a href="#productos" class="btn">Explorar Tienda</a>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN CONCEPTO / PROCESO (Imagen relacionada de mezclilla/confección sustentable) -->
+    <!-- SECCIÓN CONCEPTO / PROCESO -->
     <section id="concepto" class="section-padding">
         <div class="container concept-grid">
             <div class="concept-text">
@@ -347,14 +350,13 @@
                 <p>Cada accesorio es cosido artesanalmente en Lima, garantizando un patrón geométrico exclusivo y una durabilidad extrema para el uso diario en la ciudad.</p>
             </div>
             <div class="concept-image-wrapper">
-                <!-- Imagen relacionada: Textura de Jean Denim de alta resistencia (Inmune a bloqueos) -->
                 <img src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09?q=80&w=600&auto=format&fit=crop" alt="Textura Denim Reciclado Sostenible">
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE PRODUCTOS (Mochilas y Organizadores con imágenes conceptuales inmunes) -->
-    <section id="productos" class="section-padding" style="background-color: #0A0A0A;">
+    <!-- SECCIÓN DE PRODUCTOS -->
+    <section id="productos" class="section-padding" style="background-color: var(--white);">
         <div class="container">
             <h2 class="section-title">Catálogo de Productos</h2>
             <div class="product-grid">
@@ -363,14 +365,13 @@
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Hecho a Mano</span>
-                        <!-- Imagen relacionada: Mochila de diseño urbano con texturas industriales oscuras -->
                         <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop" alt="Mochila Diseño Urbano Upcycled">
                     </div>
                     <div class="product-info">
                         <h3>Mochila Urban Denim & PVC</h3>
                         <p class="product-desc">Compartimento principal espacioso e impermeable. Diseñada combinando secciones de lona reciclada industrial de PVC negro y acabados frontales en denim azul clásico reforzado. Logotipo mocarti cosido al frente.</p>
                         <div class="product-footer">
-                            <div class="product-price">S/ 165.00</div>
+                            <div class="product-price">S/ 185.00</div>
                             <button class="btn btn-sm" onclick="addToCart('Mochila Urban Denim & PVC', 185)">Añadir</button>
                         </div>
                     </div>
@@ -380,14 +381,13 @@
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Impermeable</span>
-                        <!-- Imagen relacionada: Estuche, accesorio textil utilitario de lona callejera -->
                         <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop" alt="Cartuchera Pouch de Textura Industrial">
                     </div>
                     <div class="product-info">
                         <h3>Cartuchera Pouch Utility</h3>
                         <p class="product-desc">Estuche cilíndrico de alta resistencia para herramientas, cables o útiles escolares. Base inferior de PVC verde oliva anti-rasgaduras y costura superior en tela de jean azul denim. Cierre negro grueso.</p>
                         <div class="product-footer">
-                            <div class="product-price">S/ 35.00</div>
+                            <div class="product-price">S/ 49.00</div>
                             <button class="btn btn-sm" onclick="addToCart('Cartuchera Pouch Utility', 49)">Añadir</button>
                         </div>
                     </div>
@@ -453,7 +453,7 @@
                 container.innerHTML += `
                     <div class="cart-item">
                         <div>
-                            <h4 style="color: white; font-size: 1.1rem;">${item.name}</h4>
+                            <h4 style="color: var(--text-dark); font-size: 1.1rem;">${item.name}</h4>
                             <span style="color: var(--primary-color); font-weight: bold;">S/ ${item.price}.00</span>
                         </div>
                         <button onclick="removeItem(${index})" style="background:none; border:none; color: #ff5252; cursor:pointer;"><i class="fa-solid fa-trash-can"></i></button>
