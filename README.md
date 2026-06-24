@@ -317,7 +317,7 @@
             <a href="#inicio" class="logo">ECO-<span>REBORN</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#concepto">Proceso</a></li>
+                <li><a href="#concepto">Nosotros</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li>
                     <button class="cart-icon-btn" onclick="toggleCart()">
@@ -364,7 +364,7 @@
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Hecho a Mano</span>
-                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop" alt="Mochila Diseño Urbano Upcycled">
+                        <img src="//f.fcdn.app/imgs/e0191d/www.inbox.com.pe/inbope/77e4/webp/catalogo/JS0A4QVB_3550_1/1000x1000/mochila-portalaptop-right-pack-expression-aliencore-embroidery.jpg" alt="Mochila Diseño Urbano Upcycled">
                     </div>
                     <div class="product-info">
                         <h3>Mochila Urban Denim & PVC</h3>
@@ -383,7 +383,7 @@
                         <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop" alt="Cartuchera Pouch de Textura Industrial">
                     </div>
                     <div class="product-info">
-                        <h3>Cartuchera Pouch Utility</h3>
+                        <h3>Bolsa Pouch Utility</h3>
                         <p class="product-desc">Estuche cilíndrico de alta resistencia para herramientas, cables o útiles escolares. Base inferior de PVC verde oliva anti-rasgaduras y costura superior en tela de jean azul denim. Cierre negro grueso.</p>
                         <div class="product-footer">
                             <div class="product-price">S/ 49.00</div>
