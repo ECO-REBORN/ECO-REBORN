@@ -386,7 +386,7 @@
                 <p>Cada accesorio es cosido artesanalmente en Lima, garantizando un patrón geométrico exclusivo y una durabilidad extrema para el uso diario en la ciudad.</p>
             </div>
             <div class="concept-image-wrapper">
-                <img src="blob:https://web.whatsapp.com/13076233-df3b-4591-96d4-5fcc090ed8a0" alt="Textura Denim Reciclado Sostenible">
+                <img src="mochila-reciclada.jpg" alt="Mochila de Diseño Sustentable Urban">
             </div>
         </div>
     </section>
