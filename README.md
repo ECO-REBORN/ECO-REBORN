@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -9,21 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Iconos -->
+    <!-- Iconos (FontAwesome para el logo de Instagram) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- ESTILEADO CLARO Y VERDE --- */
+        /* --- ESTILEADO CLARO --- */
         :root {
-            --primary-color: #43a047; /* Verde medio */
-            --primary-light: #66bb6a; /* Verde claro */
-            --bg-light: #ffffff; /* Fondo blanco */
-            --bg-card: #f1f8e9; /* Fondo de tarjeta verde muy claro */
-            --text-dark: #212121; /* Texto oscuro principal */
-            --text-muted: #757575; /* Texto oscuro secundario */
-            --white: #FFFFFF;
-            --border-light: #e0e0e0;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --clr-primary: #43a047;     /* Verde Claro Principal */
+            --clr-light: #81c784;       /* Verde Más Claro */
+            --clr-bg: #ffffff;          /* Fondo Puro Blanco */
+            --clr-card: #f1f8e9;        /* Fondo Verde Menta muy sutil */
+            --clr-dark: #1a1a1a;        /* Texto Principal */
+            --clr-muted: #666666;       /* Texto Secundario */
+            --clr-white: #ffffff;
+            --clr-border: #e0e0e0;
+            --speed: 0.3s;
         }
 
         * {
@@ -35,8 +36,8 @@
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            background-color: var(--clr-bg) !important;
+            color: var(--clr-dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -55,8 +56,8 @@
 
         /* --- NAVBAR --- */
         header {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-bottom: 1px solid var(--border-light);
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--clr-border);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -73,11 +74,11 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--text-dark);
+            color: var(--clr-dark);
             text-decoration: none;
         }
 
-        .logo span { color: var(--primary-color); }
+        .logo span { color: var(--clr-primary); }
 
         .nav-links {
             display: flex;
@@ -88,18 +89,18 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-muted);
+            color: var(--clr-muted);
             font-weight: 600;
             font-size: 1.1rem;
-            transition: var(--transition);
+            transition: var(--speed);
         }
 
-        .nav-links a:hover { color: var(--primary-color); }
+        .nav-links a:hover { color: var(--clr-primary); }
 
         .cart-icon-btn {
             background: none;
             border: none;
-            color: var(--text-dark);
+            color: var(--clr-dark);
             font-size: 1.3rem;
             cursor: pointer;
             position: relative;
@@ -109,18 +110,18 @@
             position: absolute;
             top: -10px;
             right: -12px;
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: var(--clr-primary);
+            color: var(--clr-white);
             font-size: 0.75rem;
             padding: 2px 6px;
             border-radius: 50%;
         }
 
-        /* --- HERO DE ENTRADA --- */
-        .hero {
-            background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), 
+        /* --- HERO --- */
+        .hero-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), 
                         url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
-            height: 65vh;
+            height: 60vh;
             display: flex;
             align-items: center;
         }
@@ -129,25 +130,25 @@
             font-size: 4.5rem;
             line-height: 0.9;
             margin-bottom: 1.5rem;
-            color: var(--text-dark);
+            color: var(--clr-dark);
         }
 
         .hero-content p {
             font-size: 1.2rem;
-            color: var(--text-muted);
+            color: var(--clr-muted);
             max-width: 600px;
             margin-bottom: 2.5rem;
         }
 
         .btn {
             display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: var(--clr-primary);
+            color: var(--clr-white);
             padding: 1rem 2.5rem;
             text-decoration: none;
             font-weight: 700;
             border-radius: 4px;
-            transition: var(--transition);
+            transition: var(--speed);
             border: none;
             cursor: pointer;
             text-transform: uppercase;
@@ -155,7 +156,7 @@
         }
 
         .btn:hover {
-            background-color: var(--primary-light);
+            background-color: var(--clr-light);
             transform: translateY(-3px);
         }
 
@@ -164,9 +165,9 @@
 
         .section-title {
             font-size: 2.3rem;
-            color: var(--text-dark);
+            color: var(--clr-dark);
             margin-bottom: 3rem;
-            border-left: 5px solid var(--primary-color);
+            border-left: 5px solid var(--clr-primary);
             padding-left: 20px;
         }
 
@@ -179,21 +180,26 @@
 
         .concept-text p {
             font-size: 1.15rem;
-            color: var(--text-muted);
+            color: var(--clr-muted);
             margin-bottom: 1.5rem;
         }
 
-        .accent { color: var(--primary-color); font-weight: 600; }
+        .accent { color: var(--clr-primary); font-weight: 600; }
 
         .concept-image-wrapper img {
             width: 100%;
             height: 380px;
             object-fit: cover;
             border-radius: 8px;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--clr-border);
         }
 
-        /* --- CUADRÍCULA DE PRODUCTOS --- */
+        /* --- NUEVA SECCIÓN: ORIGEN DEL DISEÑO --- */
+        .origin-section {
+            background-color: var(--clr-card);
+        }
+
+        /* --- PRODUCTOS --- */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -201,19 +207,19 @@
         }
 
         .product-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-light);
+            background-color: var(--clr-bg);
+            border: 1px solid var(--clr-border);
             border-radius: 12px;
             overflow: hidden;
-            transition: var(--transition);
+            transition: var(--speed);
             display: flex;
             flex-direction: column;
         }
 
         .product-card:hover {
             transform: translateY(-10px);
-            border-color: var(--primary-color);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: var(--clr-primary);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
         .product-img-holder {
@@ -221,7 +227,7 @@
             height: 380px;
             overflow: hidden;
             position: relative;
-            background-color: var(--white);
+            background-color: var(--clr-white);
         }
 
         .product-img-holder img {
@@ -234,8 +240,8 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: var(--clr-primary);
+            color: var(--clr-white);
             padding: 4px 12px;
             font-size: 0.8rem;
             font-weight: 700;
@@ -244,40 +250,40 @@
         }
 
         .product-info { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
-        .product-info h3 { font-size: 1.5rem; color: var(--text-dark); margin-bottom: 0.5rem; }
-        .product-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
+        .product-info h3 { font-size: 1.5rem; color: var(--clr-dark); margin-bottom: 0.5rem; }
+        .product-desc { color: var(--clr-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
         
         .product-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-top: 1.5rem;
-            border-top: 1px solid var(--border-light);
+            border-top: 1px solid var(--clr-border);
         }
 
-        .product-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--text-dark); }
+        .product-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--clr-dark); }
         .btn-sm { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
 
-        /* --- INTERFAZ CARRITO SIDEBAR --- */
+        /* --- CARRITO SIDEBAR --- */
         .cart-sidebar {
             position: fixed;
             top: 0;
             right: -400px;
             width: 400px;
             height: 100vh;
-            background-color: var(--bg-light);
-            border-left: 1px solid var(--border-light);
+            background-color: var(--clr-white);
+            border-left: 1px solid var(--clr-border);
             z-index: 2000;
             box-shadow: -10px 0 30px rgba(0,0,0,0.05);
-            transition: var(--transition);
+            transition: var(--speed);
             padding: 2.5rem;
             display: flex;
             flex-direction: column;
         }
 
         .cart-sidebar.open { right: 0; }
-        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem; }
-        .close-cart { background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; }
+        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid var(--clr-border); padding-bottom: 1rem; }
+        .close-cart { background: none; border: none; color: var(--clr-muted); font-size: 1.5rem; cursor: pointer; }
         .cart-items-container { flex-grow: 1; overflow-y: auto; }
         
         .cart-item {
@@ -285,27 +291,58 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1.5rem;
-            background: var(--white);
+            background: var(--clr-white);
             padding: 10px;
             border-radius: 6px;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--clr-border);
         }
 
-        .cart-footer-panel { border-top: 1px solid var(--border-light); padding-top: 1.5rem; }
-        .total-row { display: flex; justify-content: space-between; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1.5rem; color: var(--text-dark); }
+        .cart-footer-panel { border-top: 1px solid var(--clr-border); padding-top: 1.5rem; }
+        .total-row { display: flex; justify-content: space-between; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1.5rem; color: var(--clr-dark); }
 
         /* --- FOOTER --- */
-        footer { background-color: var(--bg-card); border-top: 1px solid var(--border-light); padding: 3rem 0; }
-        .footer-grid { display: flex; justify-content: space-between; align-items: center; }
-        .footer-logo { font-size: 1.8rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
-        .footer-logo span { color: var(--primary-color); }
-        .footer-copy { text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; border-top: 1px solid var(--border-light); padding-top: 1.5rem; }
+        footer { background-color: var(--clr-card); border-top: 1px solid var(--clr-border); padding: 4rem 0 2rem 0; }
+        .footer-grid { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
+        .footer-logo { font-size: 1.8rem; font-weight: 700; color: var(--clr-dark); text-decoration: none; }
+        .footer-logo span { color: var(--clr-primary); }
+        
+        /* Enlace de Instagram Estilizado */
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--clr-primary);
+            color: var(--clr-white);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            text-decoration: none;
+            transition: var(--speed);
+        }
+        .instagram-link:hover {
+            background-color: var(--clr-light);
+            transform: scale(1.1);
+        }
+        .social-text {
+            font-weight: 600;
+            color: var(--clr-dark);
+            font-size: 1rem;
+        }
+
+        .footer-copy { text-align: center; color: var(--clr-muted); font-size: 0.9rem; margin-top: 3rem; border-top: 1px solid var(--clr-border); padding-top: 1.5rem; }
 
         @media (max-width: 768px) {
             .concept-grid { grid-template-columns: 1fr; gap: 2rem; }
             .hero-content h1 { font-size: 3rem; }
             .cart-sidebar { width: 100%; right: -100%; }
             .nav-links { display: none; }
+            .footer-grid { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -317,7 +354,8 @@
             <a href="#inicio" class="logo">ECO-<span>REBORN</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#concepto">Nosotros</a></li>
+                <li><a href="#concepto">Proceso</a></li>
+                <li><a href="#origen">Origen</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li>
                     <button class="cart-icon-btn" onclick="toggleCart()">
@@ -329,8 +367,8 @@
         </div>
     </header>
 
-    <!-- BANNER PRINCIPAL (HERO) -->
-    <section id="inicio" class="hero">
+    <!-- BANNER PRINCIPAL -->
+    <section id="inicio" class="hero-section">
         <div class="container">
             <div class="hero-content">
                 <h1>Mocarti Design</h1>
@@ -340,7 +378,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CONCEPTO / PROCESO -->
+    <!-- PROCESO -->
     <section id="concepto" class="section-padding">
         <div class="container concept-grid">
             <div class="concept-text">
@@ -354,17 +392,33 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE PRODUCTOS -->
-    <section id="productos" class="section-padding" style="background-color: var(--white);">
+    <!-- NUEVA SECCIÓN: POR QUÉ SE CREÓ ESTA MOCHILA -->
+    <section id="origen" class="section-padding origin-section">
+        <div class="container concept-grid">
+            <div class="concept-image-wrapper">
+                <!-- Imagen representativa de diseño, costura y patronaje industrial libre -->
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600&auto=format&fit=crop" alt="Diseño y Confección del Modelo Urban">
+            </div>
+            <div class="concept-text">
+                <h2 class="section-title">Origen de la Mochila Urban</h2>
+                <p>Este modelo nació bajo una premisa clara: <span class="accent">responder al desgaste del entorno urbano moderno</span> sin generar más desperdicios en el planeta.</p>
+                <p>Las mochilas comerciales suelen romperse rápido en las costuras y bases debido al peso diario. Diseñamos este formato híbrido integrando el <strong>grosor estructural de los vaqueros recuperados</strong> en el cuerpo superior, y una base impenetrable de <strong>PVC impermeable</strong> en la parte inferior.</p>
+                <p>El resultado es una mochila ligera, de formato ergonómico, resistente al clima de Lima y completamente irrepetible en sus tonalidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="productos" class="section-padding" style="background-color: var(--clr-white);">
         <div class="container">
             <h2 class="section-title">Catálogo de Productos</h2>
             <div class="product-grid">
 
-                <!-- PRODUCTO 1: MOCHILA URBANA -->
+                <!-- PRODUCTO 1 -->
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Hecho a Mano</span>
-                        <img src="//f.fcdn.app/imgs/e0191d/www.inbox.com.pe/inbope/77e4/webp/catalogo/JS0A4QVB_3550_1/1000x1000/mochila-portalaptop-right-pack-expression-aliencore-embroidery.jpg" alt="Mochila Diseño Urbano Upcycled">
+                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop" alt="Mochila Diseño Urbano Upcycled">
                     </div>
                     <div class="product-info">
                         <h3>Mochila Urban Denim & PVC</h3>
@@ -376,14 +430,14 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 2: CARTUCHERA / MULTIUSOS -->
+                <!-- PRODUCTO 2 -->
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Impermeable</span>
                         <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop" alt="Cartuchera Pouch de Textura Industrial">
                     </div>
                     <div class="product-info">
-                        <h3>Bolsa Pouch Utility</h3>
+                        <h3>Cartuchera Pouch Utility</h3>
                         <p class="product-desc">Estuche cilíndrico de alta resistencia para herramientas, cables o útiles escolares. Base inferior de PVC verde oliva anti-rasgaduras y costura superior en tela de jean azul denim. Cierre negro grueso.</p>
                         <div class="product-footer">
                             <div class="product-price">S/ 49.00</div>
@@ -396,14 +450,14 @@
         </div>
     </section>
 
-    <!-- PANEL LATERAL DEL CARRITO -->
+    <!-- CARRITO SIDEBAR -->
     <div id="sidebar-cart" class="cart-sidebar">
         <div class="cart-header">
             <h3>Tu Carrito</h3>
             <button class="close-cart" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div id="cart-items" class="cart-items-container">
-            <p style="color: var(--text-muted); text-align: center; margin-top: 2rem;">El carrito está vacío</p>
+            <p style="color: var(--clr-muted); text-align: center; margin-top: 2rem;">El carrito está vacío</p>
         </div>
         <div class="cart-footer-panel">
             <div class="total-row">
@@ -414,15 +468,22 @@
         </div>
     </div>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÁGINA (CON ENLACE A INSTAGRAM) -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <a href="#inicio" class="footer-logo">ECO-<span>REBORN</span></a>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">Mocarti Concept © 2026</p>
+                
+                <!-- Botón de Instagram Comercial -->
+                <div class="footer-social">
+                    <span class="social-text">Síguenos en Instagram:</span>
+                    <a href="https://www.instagram.com/ecore_born/" target="_blank" class="instagram-link" title="Visitar Instagram de ECO-REBORN">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
             </div>
             <div class="footer-copy">
-                Confección de alta resistencia - Sostenibilidad desde Lima, Perú.
+                Mocarti Concept © 2026 - Confección de alta resistencia - Sostenibilidad desde Lima, Perú.
             </div>
         </div>
     </footer>
@@ -441,7 +502,7 @@
             document.getElementById('cart-count').innerText = cart.length;
             const container = document.getElementById('cart-items');
             if (cart.length === 0) {
-                container.innerHTML = `<p style="color: var(--text-muted); text-align: center; margin-top: 2rem;">El carrito está vacío</p>`;
+                container.innerHTML = `<p style="color: var(--clr-muted); text-align: center; margin-top: 2rem;">El carrito está vacío</p>`;
                 document.getElementById('cart-total-price').innerText = 'S/ 0.00';
                 return;
             }
@@ -452,8 +513,8 @@
                 container.innerHTML += `
                     <div class="cart-item">
                         <div>
-                            <h4 style="color: var(--text-dark); font-size: 1.1rem;">${item.name}</h4>
-                            <span style="color: var(--primary-color); font-weight: bold;">S/ ${item.price}.00</span>
+                            <h4 style="color: var(--clr-dark); font-size: 1.1rem;">${item.name}</h4>
+                            <span style="color: var(--clr-primary); font-weight: bold;">S/ ${item.price}.00</span>
                         </div>
                         <button onclick="removeItem(${index})" style="background:none; border:none; color: #ff5252; cursor:pointer;"><i class="fa-solid fa-trash-can"></i></button>
                     </div>`;
