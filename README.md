@@ -193,7 +193,7 @@
             border: 1px solid var(--clr-border);
         }
 
-        /* --- NUEVA SECCIÓN: ORIGEN DEL DISEÑO --- */
+        /* --- SECCIÓN: ORIGEN DEL DISEÑO --- */
         .origin-section {
             background-color: var(--clr-card);
         }
@@ -377,7 +377,7 @@
         </div>
     </section>
 
-    <!-- PROCESO -->
+    <!-- PROCESO (IMAGEN 1: TELAS TEXTILES REORGANIZADAS) -->
     <section id="concepto" class="section-padding">
         <div class="container concept-grid">
             <div class="concept-text">
@@ -386,17 +386,18 @@
                 <p>Cada accesorio es cosido artesanalmente en Lima, garantizando un patrón geométrico exclusivo y una durabilidad extrema para el uso diario en la ciudad.</p>
             </div>
             <div class="concept-image-wrapper">
-                <img src="mochila-reciclada.jpg" alt="Mochila de Diseño Sustentable Urban">
+                <!-- Imagen 1 cambiada a rollos de telas/texturas denim libres de derechos -->
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop" alt="Muestrario de Telas y Texturas Denim Reutilizadas">
             </div>
         </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: POR QUÉ SE CREÓ ESTA MOCHILA -->
+    <!-- ORIGEN DEL DISEÑO (IMAGEN 2: MOCHILA CON ASPECTO DESGASTADO URBANO) -->
     <section id="origen" class="section-padding origin-section">
         <div class="container concept-grid">
             <div class="concept-image-wrapper">
-                <!-- Imagen representativa de diseño, costura y patronaje industrial libre -->
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600&auto=format&fit=crop" alt="Diseño y Confección del Modelo Urban">
+                <!-- Imagen 2 cambiada a una mochila con estética desgastada/vintage de lona libre de derechos -->
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop" alt="Mochila con diseño desgastado y de alta resistencia urbana">
             </div>
             <div class="concept-text">
                 <h2 class="section-title">Origen de la Mochila Urban</h2>
@@ -407,13 +408,13 @@
         </div>
     </section>
 
-    <!-- CATÁLOGO -->
+    <!-- CATÁLOGO (LAS DOS ÚLTIMAS IMÁGENES NO SE CAMBIAN) -->
     <section id="productos" class="section-padding" style="background-color: var(--clr-white);">
         <div class="container">
             <h2 class="section-title">Catálogo de Productos</h2>
             <div class="product-grid">
 
-                <!-- PRODUCTO 1 -->
+                <!-- PRODUCTO 1 (SIN CAMBIOS) -->
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Hecho a Mano</span>
@@ -429,7 +430,7 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 2 -->
+                <!-- PRODUCTO 2 (SIN CAMBIOS) -->
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Impermeable</span>
