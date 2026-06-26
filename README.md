@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Iconos (FontAwesome para el logo de Instagram) -->
+    <!-- Iconos (FontAwesome para Instagram y WhatsApp) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -305,17 +305,22 @@
         .footer-logo { font-size: 1.8rem; font-weight: 700; color: var(--clr-dark); text-decoration: none; }
         .footer-logo span { color: var(--clr-primary); }
         
-        /* Enlace de Instagram Estilizado */
-        .footer-social {
+        /* Redes Sociales y Enlaces */
+        .footer-social-box {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            flex-wrap: wrap;
         }
-        .instagram-link {
+        .social-text {
+            font-weight: 600;
+            color: var(--clr-dark);
+            font-size: 1rem;
+        }
+        .social-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--clr-primary);
             color: var(--clr-white);
             width: 45px;
             height: 45px;
@@ -324,14 +329,19 @@
             text-decoration: none;
             transition: var(--speed);
         }
-        .instagram-link:hover {
-            background-color: var(--clr-light);
+        .btn-instagram {
+            background-color: #e4405f; /* Color corporativo Instagram */
+        }
+        .btn-instagram:hover {
+            background-color: #c13584;
             transform: scale(1.1);
         }
-        .social-text {
-            font-weight: 600;
-            color: var(--clr-dark);
-            font-size: 1rem;
+        .btn-whatsapp {
+            background-color: #25d366; /* Color corporativo WhatsApp */
+        }
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
         }
 
         .footer-copy { text-align: center; color: var(--clr-muted); font-size: 0.9rem; margin-top: 3rem; border-top: 1px solid var(--clr-border); padding-top: 1.5rem; }
@@ -342,6 +352,7 @@
             .cart-sidebar { width: 100%; right: -100%; }
             .nav-links { display: none; }
             .footer-grid { flex-direction: column; text-align: center; }
+            .footer-social-box { justify-content: center; }
         }
     </style>
 </head>
@@ -377,7 +388,7 @@
         </div>
     </section>
 
-    <!-- PROCESO (IMAGEN 1: TELAS TEXTILES REORGANIZADAS) -->
+    <!-- PROCESO (IMAGEN 1: TELA PURA EN ROLLOS INDUSTRIALES) -->
     <section id="concepto" class="section-padding">
         <div class="container concept-grid">
             <div class="concept-text">
@@ -386,8 +397,8 @@
                 <p>Cada accesorio es cosido artesanalmente en Lima, garantizando un patrón geométrico exclusivo y una durabilidad extrema para el uso diario en la ciudad.</p>
             </div>
             <div class="concept-image-wrapper">
-                <!-- Imagen 1 cambiada a rollos de telas/texturas denim libres de derechos -->
-                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop" alt="Muestrario de Telas y Texturas Denim Reutilizadas">
+                <!-- Imagen 1: Tela pura textil en rollos libre de derechos -->
+                <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=600&auto=format&fit=crop" alt="Rollos de tela textil pura recuperada">
             </div>
         </div>
     </section>
@@ -396,7 +407,7 @@
     <section id="origen" class="section-padding origin-section">
         <div class="container concept-grid">
             <div class="concept-image-wrapper">
-                <!-- Imagen 2 cambiada a una mochila con estética desgastada/vintage de lona libre de derechos -->
+                <!-- Imagen 2: Mochila con estética de lona desgastada urbana -->
                 <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop" alt="Mochila con diseño desgastado y de alta resistencia urbana">
             </div>
             <div class="concept-text">
@@ -408,13 +419,13 @@
         </div>
     </section>
 
-    <!-- CATÁLOGO (LAS DOS ÚLTIMAS IMÁGENES NO SE CAMBIAN) -->
+    <!-- CATÁLOGO -->
     <section id="productos" class="section-padding" style="background-color: var(--clr-white);">
         <div class="container">
             <h2 class="section-title">Catálogo de Productos</h2>
             <div class="product-grid">
 
-                <!-- PRODUCTO 1 (SIN CAMBIOS) -->
+                <!-- PRODUCTO 1 -->
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Hecho a Mano</span>
@@ -430,7 +441,7 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 2 (SIN CAMBIOS) -->
+                <!-- PRODUCTO 2 -->
                 <div class="product-card">
                     <div class="product-img-holder">
                         <span class="product-badge">Impermeable</span>
@@ -468,17 +479,24 @@
         </div>
     </div>
 
-    <!-- PIE DE PÁGINA (CON ENLACE A INSTAGRAM) -->
+    <!-- PIE DE PÁGINA (CON INSTAGRAM Y WHATSAPP LINKED) -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <a href="#inicio" class="footer-logo">ECO-<span>REBORN</span></a>
                 
-                <!-- Botón de Instagram Comercial -->
-                <div class="footer-social">
-                    <span class="social-text">Síguenos en Instagram:</span>
-                    <a href="https://www.instagram.com/ecore_born/" target="_blank" class="instagram-link" title="Visitar Instagram de ECO-REBORN">
+                <!-- Caja de Redes Sociales con Instagram y WhatsApp Directo -->
+                <div class="footer-social-box">
+                    <span class="social-text">Contáctanos:</span>
+                    
+                    <!-- Botón Instagram -->
+                    <a href="https://www.instagram.com/ecore_born/" target="_blank" class="social-btn btn-instagram" title="Visitar Instagram de ECO-REBORN">
                         <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <!-- Botón WhatsApp Directo Perú -->
+                    <a href="https://wa.me/51947802118" target="_blank" class="social-btn btn-whatsapp" title="Escríbenos al WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
             </div>
@@ -523,7 +541,14 @@
         }
 
         function removeItem(index) { cart.splice(index, 1); updateCartUI(); }
-        function checkout() { alert("Redireccionando al WhatsApp de ECO-REBORN para coordinar tu entrega."); cart = []; updateCartUI(); toggleCart(); }
+        
+        // El botón del carrito ahora también apunta directamente al enlace de tu WhatsApp corporativo
+        function checkout() { 
+            window.open("https://wa.me/51947802118?text=Hola%20ECO-REBORN,%20quiero%20coordinar%20mi%20pedido.", "_blank");
+            cart = []; 
+            updateCartUI(); 
+            toggleCart(); 
+        }
     </script>
 </body>
 </html>
